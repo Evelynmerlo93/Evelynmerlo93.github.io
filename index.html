@@ -1,83 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Evelyn Merlo</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Evelyn Merlo - Desarrolladora Front-End">
+  <title>Evelyn Merlo | Front-End Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Evelyn<span>Merlo</span></h1>
+  <header class="header">
     <nav>
+      <h1 class="logo">Evelyn Merlo</h1>
       <ul class="nav-links">
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
+  <section id="inicio" class="hero">
+    <div class="hero-texto">
       <h2>Hola, soy <span>Evelyn Merlo</span></h2>
-      <p>Desarrolladora Front-End con pasión por el diseño y la creación de experiencias web modernas.</p>
-      <a href="#projects" class="btn">Ver mis proyectos</a>
+      <p>Desarrolladora Front-End enfocada en diseño web moderno y React JS.</p>
+      <a href="#proyectos" class="btn">Ver mis proyectos</a>
+    </div>
+    <div class="hero-animacion">
+      <!-- Animación Lottie de una chica desarrolladora -->
+      <lottie-player 
+        src="https://assets9.lottiefiles.com/packages/lf20_hl0lr0qv.json"  
+        background="transparent"  
+        speed="1"  
+        style="width: 300px; height: 300px;"  
+        loop autoplay>
+      </lottie-player>
     </div>
   </section>
 
-  <section id="about" class="section">
+  <section id="sobre-mi" class="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>Me formé en Desarrollo Web, JavaScript y actualmente en React JS. Me apasiona crear interfaces limpias, funcionales y visualmente atractivas. Busco combinar código y diseño para lograr sitios únicos.</p>
+    <p>Comencé en el desarrollo web con pasión por combinar tecnología y estética. 
+    Me formé en Desarrollo Web, JavaScript y actualmente estoy aprendiendo React JS. 
+    Mi objetivo es crear experiencias digitales visualmente atractivas y funcionales.</p>
   </section>
 
-  <section id="skills" class="section">
+  <section id="habilidades" class="habilidades">
     <h2>Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill">HTML5</div>
-      <div class="skill">CSS3</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">React JS</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Diseño Web</div>
-    </div>
+    <ul>
+      <li>HTML5 / CSS3</li>
+      <li>JavaScript / React</li>
+      <li>Diseño UI/UX</li>
+      <li>Responsive Design</li>
+    </ul>
   </section>
 
-  <section id="projects" class="section">
-    <h2>Proyectos Destacados</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Landing Page Moderna</h3>
-        <p>Diseño responsivo con animaciones y tipografía elegante. Creada con HTML, CSS y JavaScript.</p>
-        <a href="#" class="btn">Ver proyecto</a>
-      </div>
-      <div class="project-card">
+  <section id="proyectos" class="proyectos">
+    <h2>Proyectos</h2>
+    <div class="grid-proyectos">
+      <div class="card">
         <h3>App React de Tareas</h3>
-        <p>Aplicación creada en React para gestionar tareas diarias con almacenamiento local.</p>
-        <a href="#" class="btn">Ver proyecto</a>
+        <p>Aplicación creada en React para gestionar tareas diarias.</p>
       </div>
-      <div class="project-card">
+      <div class="card">
         <h3>Portfolio Decorativo</h3>
-        <p>Un sitio de muestra que combina diseño interior con estilo web moderno.</p>
-        <a href="#" class="btn">Ver proyecto</a>
+        <p>Sitio que combina diseño interior con estética web moderna.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="section contact">
+  <section id="contacto" class="contacto">
     <h2>Contacto</h2>
     <p>¿Querés colaborar conmigo o ver más de mi trabajo?</p>
-    <a href="mailto:evelyn.merlo93@gmail.com" class="btn">Escríbeme</a>
+    <a href="mailto:evelyn.merlo93@gmail.com" class="btn">Escribime</a>
   </section>
 
   <footer>
     <p>© 2025 Evelyn Merlo | Desarrolladora Front-End</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
+
