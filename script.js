@@ -1,21 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. SELECCIÓN DE ELEMENTOS
-    // Obtenemos todos los enlaces de navegación
     const navLinks = document.querySelectorAll('.nav-link');
-    // Obtenemos todas las secciones de contenido
     const sections = document.querySelectorAll('.content-section');
 
     // 2. CONFIGURACIÓN DEL INTERSECTION OBSERVER
     const observerOptions = {
-        // root: null significa que observaremos las intersecciones en relación a la viewport.
+        // Un threshold de 0.2 (20% de la sección visible) es ideal para disparar la animación y el Scroll Spy.
         root: null,
-        // rootMargin: '0px' - Margen alrededor del 'root'.
-        // threshold: 0.5 significa que la función se disparará cuando el 50% de la sección esté visible.
-        // Un valor más bajo (como 0.2) puede funcionar si las secciones son muy largas.
         threshold: 0.2 
     };
 
-    // 3. FUNCIÓN DE CALLBACK DEL OBSERVADOR
+    // 3. FUNCIÓN DE CALLBACK DEL OBSERVADOR (MEJORADA PARA INCLUIR ANIMACIONES)
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             const id = entry.target.id;
@@ -23,18 +18,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (correspondingLink) {
                 if (entry.isIntersecting) {
-                    // Si la sección está intersectando (visible):
-                    
-                    // Primero, limpiamos el 'active' de todos los enlaces
+                    // --- 1. LÓGICA DE SCROLL SPY (Resaltar Enlace) ---
+                    // Limpiamos 'active' de todos
                     navLinks.forEach(link => {
                         link.classList.remove('active');
                     });
-                    
-                    // Luego, activamos solo el enlace correspondiente
+                    // Activamos el enlace correspondiente
                     correspondingLink.classList.add('active');
+
+                    // --- 2. LÓGICA DE ANIMACIÓN (Activar is-visible) ---
+                    // Buscamos todos los elementos con la clase 'animated-item' dentro de la sección visible
+                    const elementsToAnimate = entry.target.querySelectorAll('.animated-item');
+                    
+                    elementsToAnimate.forEach((element, index) => {
+                        // Aseguramos que la animación solo se añada si no la tiene
+                        if (!element.classList.contains('is-visible')) {
+                            element.classList.add('is-visible');
+                            // Añadimos un pequeño retraso escalonado (0.2s * índice)
+                            element.style.animationDelay = `${0.2 + (index * 0.2)}s`;
+                        }
+                    });
+
+                    // Si quieres que las animaciones solo se vean la PRIMERA vez que entras a la sección,
+                    // puedes descomentar la siguiente línea:
+                    // observer.unobserve(entry.target); 
                 }
-                // Nota: No necesitamos un 'else' aquí porque la limpieza se hace dentro del 'if (entry.isIntersecting)'
-                // al empezar a observar la nueva sección. Esto evita que la navegación quede vacía.
             }
         });
     };
@@ -42,17 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. CREACIÓN Y ASIGNACIÓN DEL OBSERVADOR
     const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Asignamos el observador a cada sección
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // 5. FUNCIÓN DE SMOOTH SCROLL (Opcional, si CSS no es suficiente)
-    // Aunque usamos 'scroll-behavior: smooth' en CSS, esto asegura compatibilidad
-    // y maneja cualquier necesidad de animación personalizada al hacer clic.
+    // 5. FUNCIÓN DE SMOOTH SCROLL (Desplazamiento Suave al hacer clic)
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // Previene el comportamiento de anclaje por defecto (salto brusco)
             e.preventDefault(); 
             
             const targetId = link.getAttribute('href').substring(1);
