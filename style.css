@@ -16,12 +16,27 @@
   scroll-behavior: smooth;
 }
 
+
 body {
-  font-family: 'Rubik Bubbles', cursive;
-  background: var(--beige);
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--marron);
-  overflow-x: hidden;
+  background-color: var(--beige);
 }
+
+h1, h2, h3 {
+  font-family: 'Cairo Play', cursive;
+  font-weight: 700;
+  color: var(--naranja);
+}
+
+button, .btn, nav a {
+  font-family: 'Karla', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
 
 /* ===== HEADER ===== */
 header {
