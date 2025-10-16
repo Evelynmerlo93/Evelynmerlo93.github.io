@@ -1,109 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evelyn Merlo | Portfolio </title>
-  <meta name="description" content="Portfolio de Evelyn Merlo - Desarrolladora Front-End con estilo retro pop."
-
-  <!-- Fuentes elegidas -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-
-  <!-- Fuente retro -->
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Animaciones Lottie -->
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evelyn Merlo | Desarrolladora Front-End</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ====== HEADER ====== -->
-  <header>
-    <nav>
-      <h1 class="logo">Evelyn Merlo</h1>
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- ====== HERO ====== -->
-  <section id="inicio" class="hero">
-    <div class="hero-texto">
-      <h2>Hola, soy <span>Evelyn Merlo</span></h2>
-      <p>Desarrolladora Front-End apasionada por el diseño web moderno y colorido.  
-      Creo experiencias digitales alegres y únicas con un toque retro pop.</p>
-      <a href="#proyectos" class="btn">Ver mis proyectos</a>
-    </div>
+    <header id="sidebar">
+        <div class="sidebar-content">
+            <h1>Evelyn Merlo</h1>
+            <p class="role">Desarrolladora Front-End</p>
+            <p class="role-react">Especialista en React Js</p>
 
-    <div class="hero-animacion">
-      <lottie-player 
-        src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"  
-        background="transparent"  
-        speed="1"  
-        loop  
-        autoplay
-        style="width: 320px; height: 320px;">
-      </lottie-player>
-    </div>
-  </section>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">INICIO</a></li>
+                    <li><a href="#sobremi" class="nav-link">SOBRE MÍ</a></li>
+                    <li><a href="#habilidades" class="nav-link">HABILIDADES</a></li>
+                    <li><a href="#proyectos" class="nav-link">PROYECTOS</a></li>
+                    <li><a href="#contacto" class="nav-link">CONTACTO</a></li>
+                </ul>
+            </nav>
+            
+            <div class="social-links">
+                <a href="https://github.com/evelynmerlo93" target="_blank">GitHub</a>
+                <a href="URL_LINKEDIN" target="_blank">LinkedIn</a>
+                </div>
+        </div>
+    </header>
 
-  <!-- ====== SOBRE MÍ ====== -->
-  <section id="sobre-mi" class="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Estudié Desarrollo Web, JavaScript y actualmente estoy profundizando en React JS.  
-    Me encanta combinar tecnología con diseño, creando sitios que transmiten energía, movimiento y color.</p>
-  </section>
+    <main id="content">
+        <section id="inicio" class="content-section" style="height: 100vh;">
+            <h2>Hola, soy Evelyn Merlo.</h2>
+            <p>Diseñando y construyendo experiencias web atractivas y funcionales.</p>
+        </section>
 
-  <!-- ====== PROYECTOS ====== -->
-  <section id="proyectos" class="proyectos">
-    <h2>Proyectos</h2>
-    <div class="grid-proyectos">
-      <div class="card">
-        <img src="https://placehold.co/300x180/FFB3B3/333?text=App+React+Tareas" alt="Proyecto React">
-        <h3>App React de Tareas</h3>
-        <p>Aplicación creada en React para gestionar tareas diarias con almacenamiento local.</p>
-      </div>
-      <div class="card">
-        <img src="https://placehold.co/300x180/FFD966/333?text=Portfolio+Decorativo" alt="Portfolio Decorativo">
-        <h3>Portfolio Decorativo</h3>
-        <p>Un sitio que combina diseño interior con estilo web moderno y animaciones suaves.</p>
-      </div>
-      <div class="card">
-        <img src="https://placehold.co/300x180/FF7B54/fff?text=Landing+Retro+Pop" alt="Landing Retro Pop">
-        <h3>Landing Retro Pop</h3>
-        <p>Proyecto personal inspirado en la estética setentosa, con tipografía groovy y colores vibrantes.</p>
-      </div>
-    </div>
-  </section>
+        <section id="sobremi" class="content-section" style="height: 100vh;">
+            <h2>Sobre Mí</h2>
+            <p>Egresada de Coder House, con enfoque en la creación de interfaces de usuario robustas con React Js.</p>
+        </section>
+        
+        <section id="habilidades" class="content-section" style="height: 100vh;">
+            <h2>Habilidades Técnicas</h2>
+            </section>
 
-  <!-- ====== CONTACTO ====== -->
-  <section id="contacto" class="contacto">
-    <h2>Contacto</h2>
-    <p>¿Querés colaborar conmigo o ver más de mi trabajo?</p>
-    <a href="mailto:evelyn.merlo93@gmail.com" class="btn">Escribime</a>
-  </section>
-
-  <footer>
-    <p>© 2025 Evelyn Merlo | Desarrolladora Front-End</p>
-  </footer>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
-</html>
+        <section id="proyectos" class="content-section" style="height: 100vh;">
+            <h2>Proyectos Destacados</h2>
+            </section>
+        
+        <section id="contacto" class="content-section" style="height: 100vh;">
+            <h2>Hablemos</h2>
+            </section>
+        
+    </main>
+    
+    <script src="script.js"></script>
 
 </body>
 </html>
-
