@@ -152,3 +152,49 @@ body {
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
 }
+
+/* ------------------------------------------- */
+/* ESTILOS DE ANIMACIÓN */
+/* ------------------------------------------- */
+
+/* Definición de la animación: Aparecer con un desplazamiento sutil hacia arriba */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        /* Mover el elemento 20px hacia abajo (eje Y positivo) */
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clase base para los elementos que queremos animar */
+.animated-item {
+    opacity: 0; /* Inicialmente invisible */
+}
+
+/* Clase que se añade con JavaScript para ejecutar la animación */
+.is-visible {
+    opacity: 1;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animación de la barra lateral (toda la barra aparece) */
+#sidebar {
+    /* Mantenemos los estilos anteriores, solo agregamos la animación inicial */
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1s ease-out 0.2s forwards; /* 0.2s de retraso */
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Animación específica para el texto principal del H1 */
+#inicio h2 {
+    /* Aplicar la animación con un pequeño retraso */
+    animation: fadeInUp 1s ease-out 0.5s forwards; 
+    opacity: 0;
+}
