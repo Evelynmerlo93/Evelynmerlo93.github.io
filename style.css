@@ -1,5 +1,4 @@
-/* ===== ESTILOS GENERALES ===== */
-*/* 🎨 PALETA RETRO POP */
+/* 🎨 Paleta Retro Pop */
 :root {
   --naranja: #FF7B54;
   --rosa: #FFB3B3;
@@ -8,7 +7,7 @@
   --marron: #6B4226;
 }
 
-/* ===== RESET ===== */
+/* 🧩 Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -16,161 +15,220 @@
   scroll-behavior: smooth;
 }
 
-
+/* ✨ Estilo base */
 body {
-  font-family: 'Nunito', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--marron);
-  background-color: var(--beige);
-}
-
-h1, h2, h3 {
-  font-family: 'Cairo Play', cursive;
-  font-weight: 700;
-  color: var(--naranja);
-}
-
-button, .btn, nav a {
   font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  background-color: var(--beige);
+  color: var(--marron);
+  line-height: 1.6;
+  font-size: 18px;
+  overflow-x: hidden;
 }
 
-
-/* ===== HEADER ===== */
+/* 🧭 Header */
 header {
-  background: var(--naranja);
-  padding: 1rem 2rem;
+  background-color: var(--naranja);
+  color: var(--beige);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.2rem 3rem;
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.logo {
-  font-size: 1.6rem;
-  color: #fff;
+header .logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
 }
 
-.nav-links {
+nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-.nav-links a {
-  color: #fff;
+nav a {
   text-decoration: none;
-  transition: 0.3s;
+  color: var(--beige);
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.nav-links a:hover {
+nav a:hover {
   color: var(--amarillo);
+  transform: scale(1.05);
 }
 
-/* ===== HERO ===== */
+/* 🏠 Sección principal (hero) */
 .hero {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 4rem 2rem;
-  flex-wrap: wrap;
   background: linear-gradient(135deg, var(--rosa), var(--amarillo));
   color: var(--marron);
-  text-align: center;
 }
 
-.hero-texto {
-  max-width: 400px;
-  margin: 1rem;
-}
-
-.hero-texto h2 {
-  font-size: 2rem;
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--marron);
   margin-bottom: 1rem;
 }
 
-.hero-texto h2 span {
-  color: var(--naranja);
+.hero p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background: var(--naranja);
-  color: white;
-  padding: 0.6rem 1.2rem;
+.hero .btn {
+  background-color: var(--naranja);
+  color: var(--beige);
+  border: none;
+  padding: 0.9rem 1.8rem;
   border-radius: 30px;
-  text-decoration: none;
-  transition: transform 0.2s, background 0.3s;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  background: var(--marron);
+.hero .btn:hover {
+  background-color: var(--marron);
+  color: var(--amarillo);
+  transform: translateY(-3px);
 }
 
-/* ===== SECCIONES ===== */
-section {
-  padding: 4rem 2rem;
+/* 💡 Sección sobre mí */
+.about {
+  background-color: var(--beige);
+  padding: 5rem 2rem;
   text-align: center;
 }
 
-h2 {
+.about h2 {
   color: var(--naranja);
-  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
 }
 
-/* ===== PROYECTOS ===== */
-.grid-proyectos {
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--marron);
+  font-size: 1.1rem;
+}
+
+/* 💻 Proyectos */
+.projects {
+  background-color: var(--rosa);
+  padding: 5rem 2rem;
+}
+
+.projects h2 {
+  text-align: center;
+  color: var(--marron);
+  margin-bottom: 3rem;
+  font-size: 2.3rem;
+}
+
+.project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
+.project-card {
+  background-color: var(--beige);
+  border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-.card img {
+.project-card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
-.card h3 {
-  margin: 1rem 0 0.5rem;
+.project-card h3 {
   color: var(--naranja);
+  font-size: 1.4rem;
+  margin: 1rem;
 }
 
-.card p {
-  padding: 0 1rem 1.5rem;
-}
-
-/* ===== CONTACTO ===== */
-.contacto {
-  background: var(--rosa);
+.project-card p {
   color: var(--marron);
-  padding: 3rem 1rem;
+  margin: 0 1rem 1.5rem;
 }
 
-/* ===== FOOTER ===== */
-footer {
-  background: var(--marron);
-  color: white;
-  padding: 1.2rem;
+/* 📬 Contacto */
+.contact {
+  background-color: var(--amarillo);
+  color: var(--marron);
   text-align: center;
+  padding: 4rem 2rem;
 }
+
+.contact h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.contact a {
+  color: var(--marron);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid var(--marron);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact a:hover {
+  color: var(--rosa);
+  border-color: var(--rosa);
+}
+
+/* 🦶 Footer */
+footer {
+  background-color: var(--marron);
+  color: var(--beige);
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
