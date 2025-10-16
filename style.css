@@ -7,228 +7,148 @@
   --marron: #6B4226;
 }
 
-/* 🧩 Reset general */
+/* Variables para facilitar el cambio de paleta */
+:root {
+    --color-fondo-principal: #0A0A0A; /* Negro muy oscuro */
+    --color-fondo-secundario: #1A1A1A; /* Para la barra lateral */
+    --color-texto-principal: #FFFFFF;
+    --color-acento: #00FF88; /* Verde Neón brillante para el acento */
+    --ancho-sidebar: 300px;
+}
+
+/* Estilos Generales y Reseteo */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/* ✨ Estilo base */
 body {
-  font-family: 'Karla', sans-serif;
-  background-color: var(--beige);
-  color: var(--marron);
-  line-height: 1.6;
-  font-size: 18px;
-  overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    /* Comportamiento de scroll suave para los anclajes */
+    scroll-behavior: smooth;
 }
 
-/* 🧭 Header */
-header {
-  background-color: var(--naranja);
-  color: var(--beige);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 3rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
+/* ------------------------------------------- */
+/* ESTILOS DE LA BARRA LATERAL (SIDEBAR) */
+/* ------------------------------------------- */
 
-header .logo {
-  font-weight: 700;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--beige);
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--amarillo);
-  transform: scale(1.05);
-}
-
-/* 🏠 Sección principal (hero) */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(135deg, var(--rosa), var(--amarillo));
-  color: var(--marron);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--marron);
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  max-width: 600px;
-  margin-bottom: 2rem;
-}
-
-.hero .btn {
-  background-color: var(--naranja);
-  color: var(--beige);
-  border: none;
-  padding: 0.9rem 1.8rem;
-  border-radius: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.hero .btn:hover {
-  background-color: var(--marron);
-  color: var(--amarillo);
-  transform: translateY(-3px);
-}
-
-/* 💡 Sección sobre mí */
-.about {
-  background-color: var(--beige);
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.about h2 {
-  color: var(--naranja);
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-.about p {
-  max-width: 700px;
-  margin: 0 auto;
-  color: var(--marron);
-  font-size: 1.1rem;
-}
-
-/* 💻 Proyectos */
-.projects {
-  background-color: var(--rosa);
-  padding: 5rem 2rem;
-}
-
-.projects h2 {
-  text-align: center;
-  color: var(--marron);
-  margin-bottom: 3rem;
-  font-size: 2.3rem;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.project-card {
-  background-color: var(--beige);
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-card h3 {
-  color: var(--naranja);
-  font-size: 1.4rem;
-  margin: 1rem;
-}
-
-.project-card p {
-  color: var(--marron);
-  margin: 0 1rem 1.5rem;
-}
-
-/* 📬 Contacto */
-.contact {
-  background-color: var(--amarillo);
-  color: var(--marron);
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.contact h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.contact a {
-  color: var(--marron);
-  text-decoration: none;
-  font-weight: 700;
-  border-bottom: 2px solid var(--marron);
-  transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.contact a:hover {
-  color: var(--rosa);
-  border-color: var(--rosa);
-}
-
-/* 🦶 Footer */
-footer {
-  background-color: var(--marron);
-  color: var(--beige);
-  text-align: center;
-  padding: 1.2rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  header {
+#sidebar {
+    /* Clave para mantenerla fija en la pantalla */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--ancho-sidebar);
+    height: 100vh;
+    background-color: var(--color-fondo-secundario);
+    padding: 40px 30px;
+    display: flex; /* Para centrar el contenido verticalmente si es necesario */
     flex-direction: column;
-    padding: 1rem;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-  .hero p {
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    border-right: 1px solid #333; /* Un borde sutil como el modelo */
+}
+
+.sidebar-content {
+    /* Contenedor interno para gestión de espacio */
+    flex-grow: 1; /* Ocupa el espacio disponible */
+}
+
+/* Títulos */
+#sidebar h1 {
+    font-size: 2.5rem;
+    color: var(--color-acento);
+    margin-bottom: 5px;
+}
+
+#sidebar .role {
     font-size: 1.1rem;
-  }
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #AAA;
 }
 
+#sidebar .role-react {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    margin-bottom: 50px;
+}
+
+/* Navegación */
+#main-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#main-nav li {
+    margin-bottom: 10px;
+}
+
+#main-nav a {
+    display: block;
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 8px 15px;
+    /* Línea de acento a la izquierda */
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Estilo para el elemento activo (Scroll Spy lo controlará) */
+#main-nav a.active {
+    color: var(--color-acento);
+    border-left-color: var(--color-acento);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#main-nav a:hover:not(.active) {
+    color: var(--color-acento);
+    padding-left: 20px; /* Pequeño efecto de animación */
+}
+
+/* Enlaces Sociales */
+.social-links {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+.social-links a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-acento);
+}
+
+/* ------------------------------------------- */
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
+/* ------------------------------------------- */
+
+#content {
+    /* El margen es CLAVE: desplaza el contenido para que no quede detrás de la barra */
+    margin-left: var(--ancho-sidebar);
+    padding: 50px 80px; /* Relleno amplio para el contenido */
+}
+
+.content-section {
+    padding: 100px 0;
+    min-height: 100vh; /* Asegura que la sección ocupe al menos la altura de la vista */
+}
+
+.content-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: var(--color-acento);
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
