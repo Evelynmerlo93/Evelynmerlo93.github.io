@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Evelyn Merlo - Desarrolladora Front-End">
-  <title>Evelyn Merlo | Front-End Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evelyn Merlo | Portfolio </title>
+  <meta name="description" content="Portfolio de Evelyn Merlo - Desarrolladora Front-End con estilo retro pop.">
 
-   <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
-  
+  <!-- Fuente retro -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Animaciones Lottie -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
-  <header class="header">
+  <!-- ====== HEADER ====== -->
+  <header>
     <nav>
       <h1 class="logo">Evelyn Merlo</h1>
       <ul class="nav-links">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- ====== HERO ====== -->
   <section id="inicio" class="hero">
     <div class="hero-texto">
       <h2>Hola, soy <span>Evelyn Merlo</span></h2>
-      <p>Desarrolladora Front-End enfocada en diseño web moderno y React JS.</p>
+      <p>Desarrolladora Front-End apasionada por el diseño web moderno y colorido.  
+      Creo experiencias digitales alegres y únicas con un toque retro pop.</p>
       <a href="#proyectos" class="btn">Ver mis proyectos</a>
     </div>
+
     <div class="hero-animacion">
-      <!-- Animación Lottie de una chica desarrolladora -->
       <lottie-player 
-        src="https://assets9.lottiefiles.com/packages/lf20_hl0lr0qv.json"  
+        src="https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"  
         background="transparent"  
         speed="1"  
-        style="width: 300px; height: 300px;"  
-        loop autoplay>
+        loop  
+        autoplay
+        style="width: 320px; height: 320px;">
       </lottie-player>
     </div>
   </section>
 
+  <!-- ====== SOBRE MÍ ====== -->
   <section id="sobre-mi" class="sobre-mi">
     <h2>Sobre mí</h2>
-    <p>Comencé en el desarrollo web con pasión por combinar tecnología y estética. 
-    Me formé en Desarrollo Web, JavaScript y actualmente estoy aprendiendo React JS. 
-    Mi objetivo es crear experiencias digitales visualmente atractivas y funcionales.</p>
+    <p>Estudié Desarrollo Web, JavaScript y actualmente estoy profundizando en React JS.  
+    Me encanta combinar tecnología con diseño, creando sitios que transmiten energía, movimiento y color.</p>
   </section>
 
-  <section id="habilidades" class="habilidades">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>HTML5 / CSS3</li>
-      <li>JavaScript / React</li>
-      <li>Diseño UI/UX</li>
-      <li>Responsive Design</li>
-    </ul>
-  </section>
-
+  <!-- ====== PROYECTOS ====== -->
   <section id="proyectos" class="proyectos">
     <h2>Proyectos</h2>
     <div class="grid-proyectos">
       <div class="card">
+        <img src="https://placehold.co/300x180/FFB3B3/333?text=App+React+Tareas" alt="Proyecto React">
         <h3>App React de Tareas</h3>
-        <p>Aplicación creada en React para gestionar tareas diarias.</p>
+        <p>Aplicación creada en React para gestionar tareas diarias con almacenamiento local.</p>
       </div>
       <div class="card">
+        <img src="https://placehold.co/300x180/FFD966/333?text=Portfolio+Decorativo" alt="Portfolio Decorativo">
         <h3>Portfolio Decorativo</h3>
-        <p>Sitio que combina diseño interior con estética web moderna.</p>
+        <p>Un sitio que combina diseño interior con estilo web moderno y animaciones suaves.</p>
+      </div>
+      <div class="card">
+        <img src="https://placehold.co/300x180/FF7B54/fff?text=Landing+Retro+Pop" alt="Landing Retro Pop">
+        <h3>Landing Retro Pop</h3>
+        <p>Proyecto personal inspirado en la estética setentosa, con tipografía groovy y colores vibrantes.</p>
       </div>
     </div>
   </section>
 
+  <!-- ====== CONTACTO ====== -->
   <section id="contacto" class="contacto">
     <h2>Contacto</h2>
     <p>¿Querés colaborar conmigo o ver más de mi trabajo?</p>
@@ -83,6 +89,12 @@
   <footer>
     <p>© 2025 Evelyn Merlo | Desarrolladora Front-End</p>
   </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
 </body>
 </html>
 
