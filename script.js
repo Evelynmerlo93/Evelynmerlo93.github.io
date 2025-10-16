@@ -1,9 +1,12 @@
-// Efecto scroll suave en los enlaces del menú
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+// Efecto suave de aparición al hacer scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
   });
+});
+
+document.querySelectorAll('section').forEach(sec => {
+  observer.observe(sec);
 });
